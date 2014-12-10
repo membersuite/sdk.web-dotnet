@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08BE75E9-6DD3-4698-9934-FE7FC4458AD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MemberSuite.SDK.Web</RootNamespace>
+    <AssemblyName>MemberSuite.SDK.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\lib\shared\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\lib\shared\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseBuild|AnyCPU'">
+    <OutputPath>..\..\lib\shared\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\MemberSuite.SDK.Web.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\lib\Spring.Net\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\lib\Telerik\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlContext.cs" />
+    <Compile Include="ControlHost.cs" />
+    <Compile Include="ControlManagers\AddressControlManager.cs" />
+    <Compile Include="ControlManagers\AjaxComboBoxControlManager.cs" />
+    <Compile Include="ControlManagers\CheckBoxControlManager.cs" />
+    <Compile Include="ControlManagers\CheckBoxListControlManager.cs" />
+    <Compile Include="ControlManagers\ComboBoxControlManager.cs" />
+    <Compile Include="ControlManagers\ControlManager.cs" />
+    <Compile Include="ControlManagers\ControlManagerResolver.cs" />
+    <Compile Include="ControlManagers\CurrencyTextBoxControlManager.cs" />
+    <Compile Include="ControlManagers\DatePickerControlManager.cs" />
+    <Compile Include="ControlManagers\DateTimePickerControlManager.cs" />
+    <Compile Include="ControlManagers\DropDownListManager.cs" />
+    <Compile Include="ControlManagers\DualListBoxControlManager.cs" />
+    <Compile Include="ControlManagers\FileUploadControlManager.cs" />
+    <Compile Include="ControlManagers\HtmlTextBoxControlManager.cs" />
+    <Compile Include="ControlManagers\HyperLinkControlManager.cs" />
+    <Compile Include="ControlManagers\LabelControlManager.cs" />
+    <Compile Include="ControlManagers\LegacyDropDownListManager.cs" />
+    <Compile Include="ControlManagers\ListBoxControlManager.cs" />
+    <Compile Include="ControlManagers\ListControlManager.cs" />
+    <Compile Include="ControlManagers\MonthDayPickerControlManager.cs" />
+    <Compile Include="ControlManagers\MonthYearPickerControlManager.cs" />
+    <Compile Include="ControlManagers\MultiItemListControlManager.cs" />
+    <Compile Include="ControlManagers\MultiSelectListBoxControlManager.cs" />
+    <Compile Include="ControlManagers\NumericTextBoxControlManager.cs" />
+    <Compile Include="ControlManagers\RadioButtonListControlManager.cs" />
+    <Compile Include="ControlManagers\RatingControlManager.cs" />
+    <Compile Include="ControlManagers\SeperatorControlManager.cs" />
+    <Compile Include="ControlManagers\SingleControlManager.cs" />
+    <Compile Include="ControlManagers\SingleItemListControlManager.cs" />
+    <Compile Include="ControlManagers\TextBoxControlManager.cs" />
+    <Compile Include="ControlManagers\TimePickerControlManager.cs" />
+    <Compile Include="Controls\AddressControl.cs" />
+    <Compile Include="Controls\CascadingDropDown\CascadingDropDownManager.cs" />
+    <Compile Include="Controls\CascadingDropDown\CascadingPair.cs" />
+    <Compile Include="Controls\CascadingDropDown\CascadingPairBehavior.cs" />
+    <Compile Include="Controls\CascadingDropDown\ChildDropDownValue.cs" />
+    <Compile Include="Controls\CascadingDropDown\NoValueInChildBehavior.cs" />
+    <Compile Include="Controls\CascadingDropDown\ParentDropDownValue.cs" />
+    <Compile Include="Controls\CascadingDropDown\ParentValueBehavior.cs" />
+    <Compile Include="Controls\CurrencyTextBox.cs" />
+    <Compile Include="Controls\DualListBox.cs" />
+    <Compile Include="Controls\FileUploadCoordinator.cs" />
+    <Compile Include="Controls\HtmlDividerControl.cs" />
+    <Compile Include="Controls\IHostedControl.cs" />
+    <Compile Include="Controls\MemberSuiteDropDownList.cs" />
+    <Compile Include="Controls\MonthDayPicker.cs" />
+    <Compile Include="Controls\MonthYearPicker.cs" />
+    <Compile Include="Extensions\Telerik\ConciergeImagesProvider.cs" />
+    <Compile Include="Extensions\Telerik\FileCabinetImagesProvider.cs" />
+    <Compile Include="Globalization\Currency.cs" />
+    <Compile Include="IControlHost.cs" />
+    <Compile Include="MemberSuiteForm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\CascadingDropDown\CascadingDropDown.js" />
+    <EmbeddedResource Include="Controls\StatesAndCountries.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\SearchOperationsMapping.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FieldDataDisplayMapping.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ShowHideFieldPanels.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MemberSuite.SDK\MemberSuite.SDK.csproj">
+      <Project>{7C680047-90EB-4BE5-865C-1BD3502F9BBB}</Project>
+      <Name>MemberSuite.SDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ValidateCountry.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FieldDataDisplayMapping>
+  <DataTypes>
+
+    <DataType Label="{FieldDataType.Text}" Value="Text"/>
+    <DataType Label="{FieldDataType.HtmlText}" Value="HtmlText"/>
+    <DataType Label="{FieldDataType.Boolean}" Value="Boolean"/>
+    <DataType Label="{FieldDataType.Integer}" Value="Integer"/>
+    <DataType Label="{FieldDataType.Decimal}" Value="Decimal"/>
+    <DataType Label="{FieldDataType.Date}" Value="Date"/>
+    <DataType Label="{FieldDataType.DateTime}" Value="DateTime"/>
+    <DataType Label="{FieldDataType.Time}" Value="Time"/>
+    <DataType Label="{FieldDataType.Money}" Value="Money"/>
+    <DataType Label="{FieldDataType.Email}" Value="Email"/>
+    <DataType Label="{FieldDataType.PhoneNumber}" Value="PhoneNumber"/>
+    <DataType Label="{FieldDataType.Url}" Value="Url"/>
+    <DataType Label="{FieldDataType.Percentage}" Value="Percentage"/>
+    <DataType Label="{FieldDataType.List}" Value="List"/>
+    <DataType Label="{FieldDataType.Image}" Value="Image"/>
+    <DataType Label="{FieldDataType.Document}" Value="Document"/>
+    <DataType Label="{FieldDataType.Reference}" Value="Reference"/>
+
+  </DataTypes>
+  <DisplayTypes>
+    <!-- Text Box -->
+    <DisplayType Label="{FieldDisplayType.TextBox}" Value="TextBox" >
+     
+        <Dependency>Text</Dependency>
+        <Dependency>PhoneNumber</Dependency>
+        <Dependency>Url</Dependency>
+     
+    </DisplayType>
+
+    <!-- Email Text Box  -->
+    <DisplayType Label="{FieldDisplayType.EmailTextBox}" Value="EmailTextBox" >
+     
+        <Dependency>Email</Dependency>
+     
+    </DisplayType>
+
+    <!-- Numerical TextBox -->
+    <DisplayType Label="{FieldDisplayType.NumericTextBox}" Value="NumericTextBox">
+     
+        <Dependency>Integer</Dependency>
+        <Dependency>Decimal</Dependency>
+        <Dependency>Percentage</Dependency>
+     
+    </DisplayType>
+
+    <!-- Rating -->
+    <DisplayType Label="{FieldDisplayType.Rating}" Value="Rating">
+
+      <Dependency>Integer</Dependency>
+      <Dependency>Decimal</Dependency>
+     
+    </DisplayType>
+
+    <!-- Password Protected TextBox -->
+    <DisplayType Label="{FieldDisplayType.Password}" Value="Password">
+     
+        <Dependency>Text</Dependency>
+     
+    </DisplayType>
+
+    <!-- Date Picker-->
+    <DisplayType Label="{FieldDisplayType.DatePicker}" Value="DatePicker">
+     
+        <Dependency>Date</Dependency>
+     
+    </DisplayType>
+
+    <!-- Date/Time Picker-->
+    <DisplayType Label="{FieldDisplayType.DateTimePicker}" Value="DateTimePicker">
+     
+        <Dependency>DateTime</Dependency>
+     
+    </DisplayType>
+
+    <!-- Month/Day Picker-->
+    <DisplayType Label="{FieldDisplayType.MonthDayPicker}" Value="MonthDayPicker">
+     
+        <Dependency>Date</Dependency>
+        <Dependency>DateTime</Dependency>
+     
+    </DisplayType>
+
+    
+    <!-- Month/Year Picker-->
+    <DisplayType Label="{FieldDisplayType.MonthYearPicker}" Value="MonthYearPicker">
+     
+        <Dependency>Date</Dependency>
+        <Dependency>DateTime</Dependency>
+     
+    </DisplayType>
+
+
+    <!-- Checkbox -->
+    <DisplayType Label="{FieldDisplayType.CheckBox}" Value="CheckBox">
+     
+        <Dependency>Boolean</Dependency>
+     
+    </DisplayType>
+
+    <!-- Checkboxes -->
+    <DisplayType Label="{FieldDisplayType.CheckBoxes}" Value="CheckBoxes">
+     
+        <Dependency>List</Dependency>
+     
+    </DisplayType>
+
+
+    <!-- RadioButtons -->
+    <DisplayType Label="{FieldDisplayType.RadioButtons}" Value="RadioButtons">
+     
+       
+        <Dependency>Text</Dependency>
+     
+    </DisplayType>
+
+    <!-- DropDownList -->
+    <DisplayType Label="{FieldDisplayType.DropDownList}" Value="DropDownList">
+     
+        <Dependency>Text</Dependency>
+        <Dependency>Reference</Dependency>
+     
+    </DisplayType>
+
+    <!-- Large Text Box -->
+    <DisplayType Label="{FieldDisplayType.LargeTextBox}" Value="LargeTextBox">
+     
+        <Dependency>Text</Dependency>
+      <Dependency>LargeText</Dependency>
+      
+     
+    </DisplayType>
+
+
+    <!-- ComboBox -->
+    <DisplayType Label="{FieldDisplayType.ComboBox}" Value="ComboBox">
+     
+        <Dependency>Text</Dependency>
+     
+    </DisplayType>
+
+
+    <!-- CurrencyTextBox -->
+    <DisplayType Label="{FieldDisplayType.CurrencyTextBox}" Value="CurrencyTextBox">
+     
+        <Dependency>Money</Dependency>
+     
+    </DisplayType>
+
+    <!-- ListBox -->
+    <DisplayType Label="{FieldDisplayType.ListBox}" Value="ListBox">
+     
+        <Dependency>Text</Dependency>
+     
+    </DisplayType>
+
+    <!-- MultiSelectListBox -->
+    <DisplayType Label="{FieldDisplayType.MultiSelectListBox}" Value="MultiSelectListBox">
+     
+        <Dependency>List</Dependency>
+     
+    </DisplayType>
+
+
+    <!-- DualListBox -->
+    <DisplayType Label="{FieldDisplayType.DualListBox}" Value="DualListBox">
+     
+        <Dependency>List</Dependency>
+
+     
+    </DisplayType>
+
+    <!-- File Upload -->
+    <DisplayType Label="{FieldDisplayType.FileUpload}" Value="FileUpload">
+     
+        <Dependency>Document</Dependency>
+        <Dependency>Image</Dependency>
+     
+    </DisplayType>
+
+    <!-- AJAX ComboBox -->
+    <DisplayType Label="{FieldDisplayType.AjaxComboBox}" Value="AjaxComboBox">
+     
+        <Dependency>Reference</Dependency>
+     
+    </DisplayType>
+
+    <!-- Html Formatted Box -->
+    <DisplayType Label="{FieldDisplayType.HtmlTextBox}" Value="HtmlTextBox">
+     
+        <Dependency>HtmlText</Dependency>
+     
+    </DisplayType>
+
+    <!-- Time -->
+    <DisplayType Label="{FieldDisplayType.TimePicker}" Value="TimePicker">
+
+      <Dependency>Time</Dependency>
+
+    </DisplayType>
+
+    
+  </DisplayTypes>
+</FieldDataDisplayMapping>

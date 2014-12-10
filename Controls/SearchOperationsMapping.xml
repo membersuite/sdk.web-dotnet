@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Helper file for mapping field data types to complex query view operations, and then operation-->
+<SearchOperations>
+  <Operation Name="Contains">
+    <ValidFor DataType="Text" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="LargeText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="HtmlText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="PhoneNumber" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Url" Predicate="spanSingleTextBox"/>
+  </Operation>
+  <Operation Name="DoesNotContain">
+    <ValidFor DataType="Text" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="LargeText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="HtmlText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="PhoneNumber" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Url" Predicate="spanSingleTextBox"/>
+  </Operation>
+  <Operation Name="Equals">
+    <ValidFor DataType="Text" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="LargeText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="HtmlText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Integer" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Decimal" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Percentage" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Date" Predicate="spanSingleDate"/>
+    <ValidFor DataType="DateTime" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Money" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Time" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Email" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="PhoneNumber" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Url" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Boolean" Predicate="spanBoolean"/>
+  </Operation>
+  <Operation Name="DoesNotEqual">
+    <ValidFor DataType="Text" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="LargeText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="HtmlText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Integer" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Time" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Decimal" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Percentage" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Date" Predicate="spanSingleDate"/>
+    <ValidFor DataType="DateTime" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Money" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="PhoneNumber" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Url" Predicate="spanSingleTextBox"/>
+  </Operation>
+  <Operation Name="IsBlank">
+    <ValidFor DataType="Text"/>
+    <ValidFor DataType="List"/>
+    <ValidFor DataType="LargeText"/>
+    <ValidFor DataType="HtmlText"/>
+    <ValidFor DataType="Boolean"/>
+    <ValidFor DataType="Percentage"/>
+    <ValidFor DataType="Date"/>
+    <ValidFor DataType="DateTime"/>
+    <ValidFor DataType="Time"/>
+    <ValidFor DataType="Money"/>
+    <ValidFor DataType="Email"/>
+    <ValidFor DataType="PhoneNumber"/>
+    <ValidFor DataType="Integer"/>
+    <ValidFor DataType="Decimal"/>
+    <ValidFor DataType="Url"/>
+    <ValidFor DataType="Reference" />
+  </Operation>
+  <Operation Name="IsNotBlank">
+    <ValidFor DataType="Text"/>
+    <ValidFor DataType="List"/>
+    <ValidFor DataType="LargeText"/>
+    <ValidFor DataType="HtmlText"/>
+    <ValidFor DataType="Boolean"/>
+    <ValidFor DataType="Percentage"/>
+    <ValidFor DataType="Date"/>
+    <ValidFor DataType="Time"/>
+    <ValidFor DataType="DateTime"/>
+    <ValidFor DataType="Money"/>
+    <ValidFor DataType="Email"/>
+    <ValidFor DataType="PhoneNumber"/>
+    <ValidFor DataType="Integer"/>
+    <ValidFor DataType="Decimal"/>
+    <ValidFor DataType="Url"/>
+    <ValidFor DataType="Reference" />
+  </Operation>
+  <Operation Name="IsBetween">
+    <ValidFor DataType="Text" Predicate="spanDualTextBox"/>
+    <ValidFor DataType="Integer" Predicate="spanDualNumericTextBox"/>
+    <ValidFor DataType="Time" Predicate="spanDualDate"/>
+    <ValidFor DataType="Decimal" Predicate="spanDualNumericTextBox"/>
+    <ValidFor DataType="Percentage" Predicate="spanDualNumericTextBox"/>
+    <ValidFor DataType="Date" Predicate="spanDualDate"/>
+    <ValidFor DataType="DateTime" Predicate="spanDualDate"/>
+    <ValidFor DataType="Money" Predicate="spanDualNumericTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanDualTextBox"/>
+  </Operation>
+  <Operation Name="IsNotBetween">
+    <ValidFor DataType="Text" Predicate="spanDualTextBox"/>
+    <ValidFor DataType="Integer" Predicate="spanDualNumericTextBox"/>
+    <ValidFor DataType="Time" Predicate="spanDualDate"/>
+    <ValidFor DataType="Decimal" Predicate="spanDualNumericTextBox"/>
+    <ValidFor DataType="Percentage" Predicate="spanDualNumericTextBox"/>
+    <ValidFor DataType="Date" Predicate="spanDualDate"/>
+    <ValidFor DataType="DateTime" Predicate="spanDualDate"/>
+    <ValidFor DataType="Money" Predicate="spanDualNumericTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanDualTextBox"/>
+  </Operation>
+  <Operation Name="IsGreaterThan">
+    <ValidFor DataType="Text" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="LargeText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="HtmlText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Integer" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Time" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Decimal" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Percentage" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Date" Predicate="spanSingleDate"/>
+    <ValidFor DataType="DateTime" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Money" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanSingleTextBox"/>
+  </Operation>
+  <Operation Name="IsGreaterThanOrEqualTo">
+    <ValidFor DataType="Text" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="LargeText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="HtmlText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Integer" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Time" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Decimal" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Percentage" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Date" Predicate="spanSingleDate"/>
+    <ValidFor DataType="DateTime" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Money" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanSingleTextBox"/>
+  </Operation>
+  <Operation Name="IsLessThan">
+    <ValidFor DataType="Text" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="LargeText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="HtmlText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Integer" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Time" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Decimal" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Percentage" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Date" Predicate="spanSingleDate"/>
+    <ValidFor DataType="DateTime" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Money" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanSingleTextBox"/>
+  </Operation>
+  <Operation Name="IsLessThanOrEqual">
+    <ValidFor DataType="Text" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="LargeText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="HtmlText" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Integer" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Time" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Decimal" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Percentage" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Date" Predicate="spanSingleDate"/>
+    <ValidFor DataType="DateTime" Predicate="spanSingleDate"/>
+    <ValidFor DataType="Money" Predicate="spanNumericTextBox"/>
+    <ValidFor DataType="Email" Predicate="spanSingleTextBox"/>
+  </Operation>
+  <Operation Name="IsOneOfTheFollowing">
+    <ValidFor DataType="Text" Predicate="spanList"/>
+    <ValidFor DataType="Integer" Predicate="spanList" />
+    <ValidFor DataType="Time" Predicate="spanList" />
+    <ValidFor DataType="Decimal" Predicate="spanList"/>
+    <ValidFor DataType="Percentage" Predicate="spanList"/>
+    <ValidFor DataType="Date" Predicate="spanList"/>
+    <ValidFor DataType="DateTime" Predicate="spanList"/>
+    <ValidFor DataType="Money" Predicate="spanList"/>
+    <ValidFor DataType="Email" Predicate="spanList"/>
+    <ValidFor DataType="PhoneNumber" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Enum" Predicate="spanList"/>
+    <ValidFor DataType="Reference" Predicate="spanList"/>
+  </Operation>
+  <Operation Name="IsNotOneOfTheFollowing">
+    <ValidFor DataType="Text" Predicate="spanList"/>
+    <ValidFor DataType="Integer" Predicate="spanList" />
+    <ValidFor DataType="Time" Predicate="spanList" />
+    <ValidFor DataType="Decimal" Predicate="spanList"/>
+    <ValidFor DataType="Percentage" Predicate="spanList"/>
+    <ValidFor DataType="Date" Predicate="spanList"/>
+    <ValidFor DataType="DateTime" Predicate="spanList"/>
+    <ValidFor DataType="Money" Predicate="spanList"/>
+    <ValidFor DataType="Email" Predicate="spanList"/>
+    <ValidFor DataType="PhoneNumber" Predicate="spanSingleTextBox"/>
+    <ValidFor DataType="Enum" Predicate="spanList"/>
+    <ValidFor DataType="Reference" Predicate="spanList"/>
+  </Operation>
+  <Operation Name="ContainsOneOfTheFollowing">
+    <ValidFor DataType="List" Predicate="spanList"/>
+  </Operation>
+  <Operation Name="DoesNotContainOneOfTheFollowing">
+    <ValidFor DataType="List" Predicate="spanList"/>
+  </Operation>
+</SearchOperations>

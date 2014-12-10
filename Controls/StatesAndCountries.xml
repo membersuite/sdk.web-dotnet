@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StatesAndCountries>
+  <States>
+    <State Name="No State/Province" Code="" />
+    <State Name="Alabama" Code="AL" />
+    <State Name="Alaska" Code="AK" />
+    <State Name="American Samoa" Code="AS" />
+    <State Name="Arizona" Code="AZ" />
+    <State Name="Arkansas" Code="AR" />
+    <State Name="California" Code="CA" />
+    <State Name="Colorado" Code="CO" />
+    <State Name="Connecticut" Code="CT" />
+    <State Name="Delaware" Code="DE" />
+    <State Name="District of Columbia" Code="DC" />
+    <State Name="Federated states of Micronesia" Code="FM" />
+    <State Name="Florida" Code="FL" />
+    <State Name="Georgia" Code="GA" />
+    <State Name="Guam" Code="GU" />
+    <State Name="Hawaii" Code="HI" />
+    <State Name="Idaho" Code="ID" />
+    <State Name="Illinois" Code="IL" />
+    <State Name="Indiana" Code="IN" />
+    <State Name="Iowa" Code="IA" />
+    <State Name="Kansas" Code="KS" />
+    <State Name="Kentucky" Code="KY" />
+    <State Name="Louisiana" Code="LA" />
+    <State Name="Maine" Code="ME" />
+    <State Name="Marshall islands" Code="MH" />
+    <State Name="Maryland" Code="MD" />
+    <State Name="Massachusetts" Code="MA" />
+    <State Name="Michigan" Code="MI" />
+    <State Name="Minnesota" Code="MN" />
+    <State Name="Mississippi" Code="MS" />
+    <State Name="Missouri" Code="MO" />
+    <State Name="Montana" Code="MT" />
+    <State Name="Nebraska" Code="NE" />
+    <State Name="Nevada" Code="NV" />
+    <State Name="New Hampshire" Code="NH" />
+    <State Name="New Jersey" Code="NJ" />
+    <State Name="New Mexico" Code="NM" />
+    <State Name="New York" Code="NY" />
+    <State Name="North Carolina" Code="NC" />
+    <State Name="North Dakota" Code="ND" />
+    <State Name="Northern Mariana Islands" Code="MP" />
+    <State Name="Ohio" Code="OH" />
+    <State Name="Oklahoma" Code="OK" />
+    <State Name="Oregon" Code="OR" />
+    <State Name="Palau" Code="PW" />
+    <State Name="Pennsylvania" Code="PA" />
+    <State Name="Puerto Rico" Code="PR" />
+    <State Name="Rhode Island" Code="RI" />
+    <State Name="South Carolina" Code="SC" />
+    <State Name="South Dakota" Code="SD" />
+    <State Name="Tennessee" Code="TN" />
+    <State Name="Texas" Code="TX" />
+    <State Name="Utah" Code="UT" />
+    <State Name="Vermont" Code="VT" />
+    <State Name="Virgin islands" Code="VI" />
+    <State Name="Virginia" Code="VA" />
+    <State Name="Washington" Code="WA" />
+    <State Name="West Virginia" Code="WV" />
+    <State Name="Wisconsin" Code="WI" />
+    <State Name="Wyoming" Code="WY" />
+    <State Name="Armed Forces Africa" Code="AE-A" />
+    <State Name="Armed Forces Americas (except Canada)" Code="AA" />
+    <State Name="Armed Forces Canada" Code="AE-C" />
+    <State Name="Armed Forces Europe" Code="AE-E" />
+    <State Name="Armed Forces Middle East" Code="AE-ME" />
+    <State Name="Armed Forces Pacific" Code="AP" />
+    <!-- Canadian Provinces-->
+    <State Name="Alberta" Code="AB" />
+    <State Name="British Columbia" Code="BC" />    
+    <State Name="Manitoba" Code="MB" />
+    <State Name="New Brunswick" Code="NB" />
+    <State Name="Newfoundland and Labrador" Code="NL" />
+    <State Name="Northwest Territories" Code="NT" />
+    <State Name="Nova Scotia" Code="NS" />
+    <State Name="Nunavut" Code="NU" />
+    <State Name="Ontario" Code="ON" />
+    <State Name="Prince Edward Island" Code="PE" />
+    <State Name="Quebec" Code="QC" />
+    <State Name="Saskatchewan" Code="SK" />
+    <State Name="Yukon" Code="YT" />
+    
+
+  </States>
+  <Countries>
+    <Country Code="AF" Name="Afghanistan"/>
+    <Country Code="AX" Name="Åland Islands"/>
+    <Country Code="AL" Name="Albania"/>
+    <Country Code="DZ" Name="Algeria"/>
+    <Country Code="AD" Name="Andorra"/>
+    <Country Code="AO" Name="Angola"/>
+    <Country Code="AI" Name="Anguilla"/>
+    <Country Code="AQ" Name="Antarctica"/>
+    <Country Code="AG" Name="Antigua and Barbuda"/>
+    <Country Code="AR" Name="Argentina"/>
+    <Country Code="AM" Name="Armenia"/>
+    <Country Code="AW" Name="Aruba"/>
+    <Country Code="AU" Name="Australia"/>
+    <Country Code="AT" Name="Austria"/>
+    <Country Code="AZ" Name="Azerbaijan"/>
+    <Country Code="BS" Name="Bahamas"/>
+    <Country Code="BH" Name="Bahrain"/>
+    <Country Code="BD" Name="Bangladesh"/>
+    <Country Code="BB" Name="Barbados"/>
+    <Country Code="BY" Name="Belarus"/>
+    <Country Code="BE" Name="Belgium"/>
+    <Country Code="BZ" Name="Belize"/>
+    <Country Code="BJ" Name="Benin"/>
+    <Country Code="BM" Name="Bermuda"/>
+    <Country Code="BT" Name="Bhutan"/>
+    <Country Code="BO" Name="Bolivia"/>
+    <Country Code="BA" Name="Bosnia and Herzegovina"/>
+    <Country Code="BW" Name="Botswana"/>
+    <Country Code="BV" Name="Bouvet Island"/>
+    <Country Code="BR" Name="Brazil"/>
+    <Country Code="BQ" Name="British Antarctic Territory"/>
+    <Country Code="IO" Name="British Indian Ocean Territory"/>
+    <Country Code="VG" Name="British Virgin Islands"/>
+    <Country Code="BN" Name="Brunei"/>
+    <Country Code="BG" Name="Bulgaria"/>
+    <Country Code="BF" Name="Burkina Faso"/>
+    <Country Code="BI" Name="Burundi"/>
+    <Country Code="KH" Name="Cambodia"/>
+    <Country Code="CM" Name="Cameroon"/>
+    <Country Code="CA" Name="Canada" HasStates="true" HasZip="true"/>
+    <Country Code="CT" Name="Canton and Enderbury Islands"/>
+    <Country Code="CV" Name="Cape Verde"/>
+    <Country Code="KY" Name="Cayman Islands"/>
+    <Country Code="CF" Name="Central African Republic"/>
+    <Country Code="TD" Name="Chad"/>
+    <Country Code="CL" Name="Chile"/>
+    <Country Code="CN" Name="China"/>
+    <Country Code="CX" Name="Christmas Island"/>
+    <Country Code="CC" Name="Cocos [Keeling] Islands"/>
+    <Country Code="CO" Name="Colombia"/>
+    <Country Code="KM" Name="Comoros"/>
+    <Country Code="CG" Name="Congo - Brazzaville"/>
+    <Country Code="CD" Name="Congo - Kinshasa"/>
+    <Country Code="CK" Name="Cook Islands"/>
+    <Country Code="CR" Name="Costa Rica"/>
+    <Country Code="HR" Name="Croatia"/>
+    <Country Code="CU" Name="Cuba"/>
+    <Country Code="CY" Name="Cyprus"/>
+    <Country Code="CZ" Name="Czech Republic"/>
+    <Country Code="CI" Name="Côte d’Ivoire"/>
+    <Country Code="DK" Name="Denmark"/>
+    <Country Code="DJ" Name="Djibouti"/>
+    <Country Code="DM" Name="Dominica"/>
+    <Country Code="DO" Name="Dominican Republic"/>
+    <Country Code="NQ" Name="Dronning Maud Land"/>
+    <Country Code="DD" Name="East Germany"/>
+    <Country Code="EC" Name="Ecuador"/>
+    <Country Code="EG" Name="Egypt"/>
+    <Country Code="SV" Name="El Salvador"/>
+    <Country Code="GQ" Name="Equatorial Guinea"/>
+    <Country Code="ER" Name="Eritrea"/>
+    <Country Code="EE" Name="Estonia"/>
+    <Country Code="ET" Name="Ethiopia"/>
+    <Country Code="FK" Name="Falkland Islands"/>
+    <Country Code="FO" Name="Faroe Islands"/>
+    <Country Code="FJ" Name="Fiji"/>
+    <Country Code="FI" Name="Finland"/>
+    <Country Code="FR" Name="France"/>
+    <Country Code="GF" Name="French Guiana"/>
+    <Country Code="PF" Name="French Polynesia"/>
+    <Country Code="TF" Name="French Southern Territories"/>
+    <Country Code="FQ" Name="French Southern and Antarctic Territories"/>
+    <Country Code="GA" Name="Gabon"/>
+    <Country Code="GM" Name="Gambia"/>
+    <Country Code="GE" Name="Georgia"/>
+    <Country Code="DE" Name="Germany"/>
+    <Country Code="GH" Name="Ghana"/>
+    <Country Code="GI" Name="Gibraltar"/>
+    <Country Code="GR" Name="Greece"/>
+    <Country Code="GL" Name="Greenland"/>
+    <Country Code="GD" Name="Grenada"/>
+    <Country Code="GP" Name="Guadeloupe"/>
+    <Country Code="GT" Name="Guatemala"/>
+    <Country Code="GG" Name="Guernsey"/>
+    <Country Code="GN" Name="Guinea"/>
+    <Country Code="GW" Name="Guinea-Bissau"/>
+    <Country Code="GY" Name="Guyana"/>
+    <Country Code="HT" Name="Haiti"/>
+    <Country Code="HM" Name="Heard Island and McDonald Islands"/>
+    <Country Code="HN" Name="Honduras"/>
+    <Country Code="HK" Name="Hong Kong SAR China"/>
+    <Country Code="HU" Name="Hungary"/>
+    <Country Code="IS" Name="Iceland"/>
+    <Country Code="IN" Name="India"/>
+    <Country Code="ID" Name="Indonesia"/>
+    <Country Code="IR" Name="Iran"/>
+    <Country Code="IQ" Name="Iraq"/>
+    <Country Code="IE" Name="Ireland"/>
+    <Country Code="IM" Name="Isle of Man"/>
+    <Country Code="IL" Name="Israel"/>
+    <Country Code="IT" Name="Italy"/>
+    <Country Code="JM" Name="Jamaica"/>
+    <Country Code="JP" Name="Japan"/>
+    <Country Code="JE" Name="Jersey"/>
+    <Country Code="JT" Name="Johnston Island"/>
+    <Country Code="JO" Name="Jordan"/>
+    <Country Code="KZ" Name="Kazakhstan"/>
+    <Country Code="KE" Name="Kenya"/>
+    <Country Code="KI" Name="Kiribati"/>
+    <Country Code="KW" Name="Kuwait"/>
+    <Country Code="KG" Name="Kyrgyzstan"/>
+    <Country Code="LA" Name="Laos"/>
+    <Country Code="LV" Name="Latvia"/>
+    <Country Code="LB" Name="Lebanon"/>
+    <Country Code="LS" Name="Lesotho"/>
+    <Country Code="LR" Name="Liberia"/>
+    <Country Code="LY" Name="Libya"/>
+    <Country Code="LI" Name="Liechtenstein"/>
+    <Country Code="LT" Name="Lithuania"/>
+    <Country Code="LU" Name="Luxembourg"/>
+    <Country Code="MO" Name="Macau SAR China"/>
+    <Country Code="MK" Name="Macedonia"/>
+    <Country Code="MG" Name="Madagascar"/>
+    <Country Code="MW" Name="Malawi"/>
+    <Country Code="MY" Name="Malaysia"/>
+    <Country Code="MV" Name="Maldives"/>
+    <Country Code="ML" Name="Mali"/>
+    <Country Code="MT" Name="Malta"/>
+    <Country Code="MQ" Name="Martinique"/>
+    <Country Code="MR" Name="Mauritania"/>
+    <Country Code="MU" Name="Mauritius"/>
+    <Country Code="YT" Name="Mayotte"/>
+    <Country Code="FX" Name="Metropolitan France"/>
+    <Country Code="MX" Name="Mexico"/>
+    <Country Code="FM" Name="Micronesia"/>
+    <Country Code="MD" Name="Moldova"/>
+    <Country Code="MC" Name="Monaco"/>
+    <Country Code="MN" Name="Mongolia"/>
+    <Country Code="ME" Name="Montenegro"/>
+    <Country Code="MS" Name="Montserrat"/>
+    <Country Code="MA" Name="Morocco"/>
+    <Country Code="MZ" Name="Mozambique"/>
+    <Country Code="MM" Name="Myanmar [Burma]"/>
+    <Country Code="NA" Name="Namibia"/>
+    <Country Code="NR" Name="Nauru"/>
+    <Country Code="NP" Name="Nepal"/>
+    <Country Code="NL" Name="Netherlands"/>
+    <Country Code="AN" Name="Netherlands Antilles"/>
+    <Country Code="NT" Name="Neutral Zone"/>
+    <Country Code="NC" Name="New Caledonia"/>
+    <Country Code="NZ" Name="New Zealand"/>
+    <Country Code="NI" Name="Nicaragua"/>
+    <Country Code="NE" Name="Niger"/>
+    <Country Code="NG" Name="Nigeria"/>
+    <Country Code="NU" Name="Niue"/>
+    <Country Code="NF" Name="Norfolk Island"/>
+    <Country Code="KP" Name="North Korea"/>
+    <Country Code="VD" Name="North Vietnam"/>
+    <Country Code="NO" Name="Norway"/>
+    <Country Code="OM" Name="Oman"/>
+    <Country Code="PC" Name="Pacific Islands Trust Territory"/>
+    <Country Code="PK" Name="Pakistan"/>    
+    <Country Code="PS" Name="Palestinian Territories"/>
+    <Country Code="PA" Name="Panama"/>
+    <Country Code="PZ" Name="Panama Canal Zone"/>
+    <Country Code="PG" Name="Papua New Guinea"/>
+    <Country Code="PY" Name="Paraguay"/>
+    <Country Code="YD" Name="People's Democratic Republic of Yemen"/>
+    <Country Code="PE" Name="Peru"/>
+    <Country Code="PH" Name="Philippines"/>
+    <Country Code="PN" Name="Pitcairn Islands"/>
+    <Country Code="PL" Name="Poland"/>
+    <Country Code="PT" Name="Portugal"/>
+    <Country Code="QA" Name="Qatar"/>
+    <Country Code="RO" Name="Romania"/>
+    <Country Code="RU" Name="Russia"/>
+    <Country Code="RW" Name="Rwanda"/>
+    <Country Code="RE" Name="Réunion"/>
+    <Country Code="BL" Name="Saint Barthélemy"/>
+    <Country Code="SH" Name="Saint Helena"/>
+    <Country Code="KN" Name="Saint Kitts and Nevis"/>
+    <Country Code="LC" Name="Saint Lucia"/>
+    <Country Code="MF" Name="Saint Martin"/>
+    <Country Code="PM" Name="Saint Pierre and Miquelon"/>
+    <Country Code="VC" Name="Saint Vincent and the Grenadines"/>
+    <Country Code="WS" Name="Samoa"/>
+    <Country Code="SM" Name="San Marino"/>
+    <Country Code="SA" Name="Saudi Arabia"/>
+    <Country Code="SN" Name="Senegal"/>
+    <Country Code="RS" Name="Serbia"/>
+    <Country Code="CS" Name="Serbia and Montenegro"/>
+    <Country Code="SC" Name="Seychelles"/>
+    <Country Code="SL" Name="Sierra Leone"/>
+    <Country Code="SG" Name="Singapore"/>
+    <Country Code="SK" Name="Slovakia"/>
+    <Country Code="SI" Name="Slovenia"/>
+    <Country Code="SB" Name="Solomon Islands"/>
+    <Country Code="SO" Name="Somalia"/>
+    <Country Code="ZA" Name="South Africa"/>
+    <Country Code="GS" Name="South Georgia and the South Sandwich Islands"/>
+    <Country Code="KR" Name="South Korea"/>
+    <Country Code="ES" Name="Spain"/>
+    <Country Code="LK" Name="Sri Lanka"/>
+    <Country Code="SD" Name="Sudan"/>
+    <Country Code="SR" Name="Suriname"/>
+    <Country Code="SJ" Name="Svalbard and Jan Mayen"/>
+    <Country Code="SZ" Name="Swaziland"/>
+    <Country Code="SE" Name="Sweden"/>
+    <Country Code="CH" Name="Switzerland"/>
+    <Country Code="SY" Name="Syria"/>
+    <Country Code="ST" Name="São Tomé and Príncipe"/>
+    <Country Code="TW" Name="Taiwan"/>
+    <Country Code="TJ" Name="Tajikistan"/>
+    <Country Code="TZ" Name="Tanzania"/>
+    <Country Code="TH" Name="Thailand"/>
+    <Country Code="TL" Name="Timor-Leste"/>
+    <Country Code="TG" Name="Togo"/>
+    <Country Code="TK" Name="Tokelau"/>
+    <Country Code="TO" Name="Tonga"/>
+    <Country Code="TT" Name="Trinidad and Tobago"/>
+    <Country Code="TN" Name="Tunisia"/>
+    <Country Code="TR" Name="Turkey"/>
+    <Country Code="TM" Name="Turkmenistan"/>
+    <Country Code="TC" Name="Turks and Caicos Islands"/>
+    <Country Code="TV" Name="Tuvalu"/>
+    <Country Code="UM" Name="U.S. Minor Outlying Islands"/>
+    <Country Code="PU" Name="U.S. Miscellaneous Pacific Islands"/>
+    <Country Code="UG" Name="Uganda"/>
+    <Country Code="UA" Name="Ukraine"/>
+    <Country Code="SU" Name="Union of Soviet Socialist Republics"/>
+    <Country Code="AE" Name="United Arab Emirates"/>
+    <Country Code="GB" Name="United Kingdom"/>
+    <Country Code="US" Name="United States" HasStates="true"/>
+    <Country Code="ZZ" Name="Unknown or Invalid Region"/>
+    <Country Code="UY" Name="Uruguay"/>
+    <Country Code="UZ" Name="Uzbekistan"/>
+    <Country Code="VU" Name="Vanuatu"/>
+    <Country Code="VA" Name="Vatican City"/>
+    <Country Code="VE" Name="Venezuela"/>
+    <Country Code="VN" Name="Vietnam"/>
+    <Country Code="WK" Name="Wake Island"/>
+    <Country Code="WF" Name="Wallis and Futuna"/>
+    <Country Code="EH" Name="Western Sahara"/>
+    <Country Code="YE" Name="Yemen"/>
+    <Country Code="ZM" Name="Zambia"/>
+    <Country Code="ZW" Name="Zimbabwe"/>
+  </Countries>
+</StatesAndCountries>
