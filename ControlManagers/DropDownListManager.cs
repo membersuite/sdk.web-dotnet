@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Data;
 using System.ServiceModel;
-using System.Web;
 using System.Web.UI.WebControls;
 using MemberSuite.SDK.Concierge;
 using MemberSuite.SDK.Interfaces;
-using MemberSuite.SDK.Results;
 using MemberSuite.SDK.Searching;
 using MemberSuite.SDK.Searching.Operations;
 using MemberSuite.SDK.Types;
 using MemberSuite.SDK.WCF;
-using MemberSuite.SDK.Web.ControlManagers;
 using Telerik.Web.UI;
 
 
@@ -28,25 +25,25 @@ namespace MemberSuite.SDK.Web.ControlManagers
             cb.EnableTextSelection = false;
 
             setupLoadOnDemandIfLookupTablePresent(cb);
-            setupLoadOnDemandIfExtensionServiceIsPresent( cb );
-            
-            
+            setupLoadOnDemandIfExtensionServiceIsPresent(cb);
 
 
-            
+
+
+
             return cb;
         }
 
-       
+
 
         public override void DataBind()
         {
-            if (_isUsingOnDemand)
+            if (_isUsingOnDemandAndIsRequired)
                 ControlMetadata.NullValueLabel = "<showfirstvalue>";
             base.DataBind();
         }
 
-        private bool _isUsingOnDemand = false;
+        private bool _isUsingOnDemandAndIsRequired = false;
 
         private void setupLoadOnDemandIfLookupTablePresent(RadComboBox cb)
         {
@@ -54,17 +51,13 @@ namespace MemberSuite.SDK.Web.ControlManagers
 
             FieldMetadata meta = Host.GetBoundFieldFor(ControlMetadata);
 
-            if (meta == null) 
+            if (meta == null)
                 return;
 
             if (string.IsNullOrWhiteSpace(meta.LookupTableID)) return;  // no lookup table
             if (!string.IsNullOrWhiteSpace(meta.ExtensionServiceID))    // then this takes precedence
                 return;
 
-            
-
-            
-            _isUsingOnDemand = true;
             cb.EnableLoadOnDemand = true;
             cb.CausesValidation = false;
             cb.EnableScreenBoundaryDetection = true;
@@ -81,14 +74,16 @@ namespace MemberSuite.SDK.Web.ControlManagers
 
             cb.Attributes["LookupTableID"] = meta.LookupTableID;
             cb.EnableVirtualScrolling = true;
-             
+            // MS-6019 (Modified 1/9/2015) Modified to account for whether or not the ondemand field's value is required
+            _isUsingOnDemandAndIsRequired = cb.EnableLoadOnDemand && (meta.IsRequired || meta.IsRequiredInPortal);
+
         }
         const int NUM_ITEMS = 100;
         private void OnComboBoxItemsRequestedLookupTable(object o, RadComboBoxItemsRequestedEventArgs e)
         {
             var cb = o as RadComboBox;
 
-            
+
             if (cb == null)
                 return;
 
@@ -99,12 +94,12 @@ namespace MemberSuite.SDK.Web.ControlManagers
             {
                 Search s = new Search("LookupTableRow");
                 s.Context = lookuptableID;
-                
+
                 if (!string.IsNullOrWhiteSpace(e.Text))
                     s.AddCriteria(Expr.Contains("Name", e.Text));
 
-                s.AddOutputColumn( "Name" );
-                s.AddOutputColumn( "Value" );
+                s.AddOutputColumn("Name");
+                s.AddOutputColumn("Value");
                 s.AddSortColumn("Name");
 
                 var result = api.ExecuteSearch(s, e.NumberOfItems, NUM_ITEMS).ResultValue;
@@ -121,24 +116,24 @@ namespace MemberSuite.SDK.Web.ControlManagers
             }
         }
 
-        private void setupLoadOnDemandIfExtensionServiceIsPresent( RadComboBox cb )
+        private void setupLoadOnDemandIfExtensionServiceIsPresent(RadComboBox cb)
         {
             if (ControlMetadata == null) return;
-            
+
             FieldMetadata meta = Host.GetBoundFieldFor(ControlMetadata);
 
             if (meta == null || string.IsNullOrWhiteSpace(meta.ExtensionServiceID))
                 return;
 
-            
 
-                        // now, the extension service
-            _isUsingOnDemand = true;
+
+            // now, the extension service
+            _isUsingOnDemandAndIsRequired = true;
 
             msExtensionService es;
-            using( var api = GetServiceAPIProxy() )
+            using (var api = GetServiceAPIProxy())
             {
-                var mso = api.Get(meta.ExtensionServiceID ).ResultValue;
+                var mso = api.Get(meta.ExtensionServiceID).ResultValue;
                 if (mso == null)    // the service has been deleted
                     return;
 
@@ -148,12 +143,12 @@ namespace MemberSuite.SDK.Web.ControlManagers
 
             cb.EnableLoadOnDemand = true;
 
-            
+
             cb.CausesValidation = false;
-            
-            
-           
-             
+
+
+
+
             cb.EnableScreenBoundaryDetection = true;
 
             cb.Height = Unit.Pixel(200);
@@ -168,10 +163,10 @@ namespace MemberSuite.SDK.Web.ControlManagers
 
             cb.Attributes["ServiceUri"] = es.Uri;
             cb.Attributes["FieldName"] = meta.Name;
-             
- 
-        
-           
+
+
+
+
         }
 
         private void OnComboBoxItemsRequested(object o, RadComboBoxItemsRequestedEventArgs e)
@@ -189,7 +184,7 @@ namespace MemberSuite.SDK.Web.ControlManagers
 
             // get the owner object
             MemberSuiteObject obj = Host.Resolve(new Manifests.Command.ControlMetadata { DataSource = ControlMetadata.DataSource }) as MemberSuiteObject;
-            if ( obj == null ) return;
+            if (obj == null) return;
 
 
             try
@@ -206,14 +201,14 @@ namespace MemberSuite.SDK.Web.ControlManagers
                 var channel = (IExtensionService)factory.CreateChannel();
 
                 var nameValues = channel.PopulateDropdownList(obj.ClassType, cb.Attributes["RecordType"], obj);
-                
+
 
                 cb.Items.Clear();
 
                 if (nameValues == null) return;
                 //cb.Items.Add(new RadComboBoxItem("--- Select ---", null));
 
-              
+
 
                 foreach (var nv in nameValues)
                     cb.Items.Add(new RadComboBoxItem { Text = nv.Name, Value = nv.Value });
@@ -225,7 +220,7 @@ namespace MemberSuite.SDK.Web.ControlManagers
                                              "Uri '{0}' could not verified as valid.", serviceUri);
             }
 
-          
+
         }
     }
 }

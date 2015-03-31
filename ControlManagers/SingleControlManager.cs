@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MemberSuite.SDK.Manifests.Command;
+using MemberSuite.SDK.Types;
 using MemberSuite.SDK.Utilities;
 using MemberSuite.SDK.Web.Controls;
 using MemberSuite.SDK.Web.ControlManagers;
@@ -147,6 +148,41 @@ namespace MemberSuite.SDK.Web.ControlManagers
             PrimaryControl = c as T;
             _isBeingUsed = true;
             return PrimaryControl != null;
+        }
+
+        protected NameValueStringPair determineReferenceType()
+        {
+            var np = new NameValueStringPair();
+
+            if (ControlMetadata == null)
+                return np; // nothing to do
+
+            //If there's a lookup table specified return the row object as the reference type with a context of the lookup table
+            //string lookupTableId = ControlMetadata.LookupTableID;
+            //if (string.IsNullOrWhiteSpace(lookupTableId)) // try to guess id
+            //{
+            //    //HACK! Suppress the pick list entries when a lookup table is used to prevent timeouts / client cpu spikes when there's thousands
+            //    //of lookup rows.  This property can be removed when the design for large numbers of pick list entries uses popups
+            //    _suppressPickListEntries = true;
+
+            //    FieldMetadata meta = Host.GetBoundFieldFor(ControlMetadata);
+            //    if (meta != null && !string.IsNullOrWhiteSpace(meta.LookupTableID))
+            //        return new NameValueStringPair("LookupTableRow", meta.LookupTableID);
+            //}
+
+            string referenceType = ControlMetadata.ReferenceType;
+            if (referenceType == null) // try to guess id
+            {
+                FieldMetadata meta = Host.GetBoundFieldFor(ControlMetadata);
+                if (meta == null)
+                    return np;
+
+                return new NameValueStringPair(meta.ReferenceType, meta.ReferenceTypeContext);
+            }
+
+            string context = Host.ResolveComplexExpression(ControlMetadata.ReferenceContext);
+
+            return new NameValueStringPair(referenceType, context);
         }
     }
 }

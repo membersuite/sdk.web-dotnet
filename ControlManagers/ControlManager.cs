@@ -143,14 +143,14 @@ namespace MemberSuite.SDK.Web.ControlManagers
             if (IsRequired() && ControlMetadata.DisplayType != FieldDisplayType.Label)
             {
                 var rfv = new RequiredFieldValidator();
-                
+
                 rfv.ControlToValidate = controlID;
-                
+
                 // IMPORTANT - many UI components depend on this convention - that the required field validator
                 // is rfv_ + the control ID. If you change it, you will break good amount of UI code.
-                rfv.ID = "rfv_" + controlID.Replace(".","_");
+                rfv.ID = "rfv_" + controlID.Replace(".", "_");
 
-                if (ControlMetadata.ErrorMessage_RequiredField != null )
+                if (ControlMetadata.ErrorMessage_RequiredField != null)
                     rfv.ErrorMessage = ControlMetadata.ErrorMessage_RequiredField;
                 else
                 {
@@ -166,13 +166,13 @@ namespace MemberSuite.SDK.Web.ControlManagers
                         rfv.ErrorMessage = "One or more values have not been specified.";
                 }
                 rfv.Display = ValidatorDisplay.None;
-                
+
                 return rfv;
             }
 
             return null;
 
-             
+
         }
 
         public virtual bool IsRequired()
@@ -219,15 +219,20 @@ namespace MemberSuite.SDK.Web.ControlManagers
             if (ShouldExpandLookupTable)
             {
                 // now - are we dealing with a lookup table? If so, we have to get the values directly from the api
-                 
-                if (meta == null || meta.LookupTableID == null)
+                // MS-6019 (Modified 1/9/2015) Modified to check both the fieldmetadata and the controlmetadata
+                // for the lookuptableid in case one or the other has it.
+                var lookupTableId = meta != null && !string.IsNullOrWhiteSpace(meta.LookupTableID)
+                    ? meta.LookupTableID
+                    : ControlMetadata.LookupTableID;
+
+                if (string.IsNullOrWhiteSpace(lookupTableId))
                     return entries;
 
                 // let's go get them
                 using (var api = GetServiceAPIProxy())
                 {
                     Search s = new Search("LookupTableRow");
-                    s.Context = meta.LookupTableID;
+                    s.Context = lookupTableId;
                     s.AddOutputColumn("Name");
                     s.AddOutputColumn("Value");
                     SearchResult result;
@@ -249,7 +254,7 @@ namespace MemberSuite.SDK.Web.ControlManagers
         protected virtual bool ShouldExpandLookupTable
         {
             get { return false; }
-            
+
         }
 
         protected IConciergeAPIService GetServiceAPIProxy()

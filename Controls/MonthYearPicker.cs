@@ -83,10 +83,15 @@ namespace MemberSuite.SDK.Web.Controls
 
         protected override void CreateChildControls()
         {
+
+            /*
+             * Do NOT change/remove the css class name mypMonth and mypYear because they are being used to access the relative control 
+             * for Priority Payment.             
+             */
             base.CreateChildControls();
 
             Controls.Clear();
-            MonthDropDownList = new DropDownList {ID = "MonthDropDownList"};
+            MonthDropDownList = new DropDownList {ID = "MonthDropDownList",CssClass="mypMonth"};
 
             // ok - we're going to add months
             // english
@@ -108,7 +113,7 @@ namespace MemberSuite.SDK.Web.Controls
 
             // now, the years
 
-            YearDropDownList = new DropDownList {Width = Unit.Pixel(70)};
+            YearDropDownList = new DropDownList {Width = Unit.Pixel(70),CssClass="mypYear"};
 
             for (int i = StartYear; i <= EndYear; i++)
                 YearDropDownList.Items.Add(new ListItem(i.ToString()));

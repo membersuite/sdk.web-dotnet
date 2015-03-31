@@ -1,4 +1,5 @@
-﻿using System.Web.UI.WebControls;
+﻿using System.Web;
+using System.Web.UI.WebControls;
 using MemberSuite.SDK.Types;
 using MemberSuite.SDK.Web.ControlManagers;
 
@@ -94,6 +95,13 @@ namespace MemberSuite.SDK.Web.ControlManagers
                     return new AddressControlManager();
 
                 case FieldDisplayType.AjaxComboBox:
+                    //object objTypeAhead = HttpContext.Current.Items[TypeaheadControlManager.AJAX_USETYPEAHEAD];
+                    //if (objTypeAhead != null)
+                    //{
+                    //    var usage = (IndexedQuickSearchUsage)objTypeAhead;
+                    //    if (usage > IndexedQuickSearchUsage.QuickSearchesOnly)
+                    //        return new TypeaheadControlManager();
+                    //}
                     return new AjaxComboBoxControlManager();
             }
 
